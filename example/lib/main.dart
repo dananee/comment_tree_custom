@@ -40,28 +40,22 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         child: CommentTreeWidget<Comment, Comment>(
           Comment(
+              custom: Author(name: "Jonh"),
               avatar: 'null',
               userName: 'null',
               content: 'felangel made felangel/cubit_and_beyond public '),
           [
             Comment(
+                custom: Author(name: "Jonh"),
                 avatar: 'null',
                 userName: 'null',
                 content: 'A Dart template generator which helps teams'),
             Comment(
+                custom: Author(name: "Jonh"),
                 avatar: 'null',
                 userName: 'null',
                 content:
                     'A Dart template generator which helps teams generator which helps teams generator which helps teams'),
-            Comment(
-                avatar: 'null',
-                userName: 'null',
-                content: 'A Dart template generator which helps teams'),
-            Comment(
-                avatar: 'null',
-                userName: 'null',
-                content:
-                    'A Dart template generator which helps teams generator which helps teams '),
           ],
           treeThemeData:
               TreeThemeData(lineColor: Colors.green[500]!, lineWidth: 3),
@@ -85,6 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Text(data.custom.name),
                 Container(
                   padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                   decoration: BoxDecoration(
@@ -186,4 +181,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
+
+class Author {
+  final name;
+
+  Author({this.name = "Name"});
 }
