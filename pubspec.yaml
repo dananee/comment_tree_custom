@@ -1,4 +1,4 @@
-name: comment_tree
+name: comment_tree_custom
 description: Render comment tree like facebook comment - reply.
 
 version: 0.3.0
